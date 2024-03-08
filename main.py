@@ -82,12 +82,19 @@ def plot_linear(a, b):
 
 
 
-def exponencial(a, x):
-    print("Faça o código")
+def exponencial(a,b,c,x):
+    return a*np.exp(b*x)+c
 
 
-def plot_exponencial(x, y):
-    print("Faça o código")
+def plot_exponencial(a,b,c):
+    x = np.linspace(-5,5,100)
+    y = exponencial(a,b,c,x)
+
+    plt.plot(x,y)
+    plt.xlabel("Eixo X")
+    plt.ylabel("Eixo Y")
+    plt.title(f"Grafico da função y={a}* e^({b}x) + {c}")
+    plt.show()
 
 
 def funcao_quadratica(x, a, b, c):
