@@ -204,19 +204,23 @@ def init():
 
                 elif categoria == 2:
                     print("\nVocê escolheu SUBTRAÇÃO")
-                    num1 = int(input("Digite o Primeiro Número da Soma: "))
-                    num2 = int(input("Digite o Segundo Número da Soma: "))
-                    print(f'O Resultado da Soma: {soma(num1,num2)}')
+                    num1 = int(input("Digite o Primeiro Número da Subtração: "))
+                    num2 = int(input("Digite o Segundo Número da Subtração: "))
+                    print(f'O Resultado da Subtração: {subtracao(num1,num2)}')
                     break
 
                 elif categoria == 3:
                     print("\nVocê escolheu MULTIPLICAÇÃO")
-                    print("Faça o código")
+                    num1 = int(input("Digite o Primeiro Número da Multplicação: "))
+                    num2 = int(input("Digite o Segundo Número da Multplicação: "))
+                    print(f'O Resultado da Multplicação: {multiplicacao(num1,num2)}')
                     break
 
                 elif categoria == 4:
                     print("\nVocê escolheu DIVISÃO")
-                    print("Faça o código")
+                    num1 = int(input("Digite o Primeiro Número da Divisão: "))
+                    num2 = int(input("Digite o Segundo Número da Divisão: "))
+                    print(f'O Resultado da Divisão: {soma(num1,num2)}')
                     break
 
                 elif categoria == 5:
