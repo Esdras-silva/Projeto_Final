@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import time
 
 calculator = """
  _________________
@@ -119,7 +120,7 @@ def calcular_raizes(a, b, c):
 
 
 def plot_quadratica(a, b, c):
-    x = np.linspace((-10,10,100))
+    x = np.linspace(-10,10,100)
     y = funcao_quadratica(x, a, b,c)
 
     plt.plot(x,y,label=f"{a}x² + {b}x + {c}")
@@ -136,11 +137,11 @@ def fatorial(n):
         return "Erro: Não é possivel calcular o fatorial de número negativo"
     elif n == 0:
         return 1
-    else:
-        resultado = 1
-        for i in range(n+1):
-            resultado *= i
-        return resultado
+
+    resultado = 1
+    for i in range(1,n+1):
+         resultado *= i
+    return resultado
 
 
 def plot_fatorial(n):
@@ -235,22 +236,40 @@ def init():
 
                 if funcao == 1:
                     print("\nVocê escolheu a função EXPONENCIAL (a ** x)")
-                    print("Faça o código")
+                    a = int(input("Digite o valor do coeficiente A: "))
+                    b = int(input("Digite o valor do coeficiente B: "))
+                    
+                    print("Gerando o gráfico...")
+                    time.sleep(2)
+                    plot_exponencial(a,b)
                     break
 
                 elif funcao == 2:
                     print("\nVocê escolheu a função QUADRÁTICA (a * x ** 2 + b * x + c)")
-                    print("Faça o código")
+                    a = int(input("Digite o valor do coeficiente A: "))
+                    b = int(input("Digite o valor do coeficiente B: "))
+                    c = int(input("Digite o valor do coeficiente C: "))
+                    print("Gerando o gráfico...")
+                    time.sleep(2)
+                    plot_quadratica(a,b,c)
                     break
 
                 elif funcao == 3:
                     print("\nVocê escolheu a função LINEAR f(x) = (a * x + b)")
-                    print("Faça o código")
+                    a = int(input("Digite o valor do coeficiente A: "))
+                    b = int(input("Digite o valor do coeficiente B: "))
+                    
+                    print("Gerando o gráfico...")
+                    time.sleep(2)
+                    plot_linear(a,b)
                     break
 
                 elif funcao == 4:
                     print("\nVocê escolheu a função FATORIAL f(x) = (a * x + b)")
-                    print("Faça o código")
+                    num = int(input("Digite o Número do Fatorial a ser calculado: : "))
+                    print("Gerando o gráfico...")
+                    time.sleep(2)
+                    plot_fatorial(num)
                     break
 
                 elif funcao == 5:
