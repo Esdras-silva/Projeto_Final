@@ -69,6 +69,14 @@ def divisao(x, y):
 def linear(x, a, b):
     return a*x+b
 
+def raiz_quadrada(x):
+    return math.sqrt(x)
+
+def converter_radianos_grau(x):
+    return x * 180/ math.pi
+
+def converter_graus_radianos(x):
+    return x * math.pi / 180
 
 def plot_linear(a, b):
     
@@ -159,7 +167,8 @@ def print_calculator():
                                 
     1: Básicas
     2: Funções 
-    3: Sair""")
+    3: Mais
+    4: Sair""")
 
 
 def print_basica():
@@ -180,6 +189,14 @@ def print_funcoes():
       3: Linear    
       4: Fatorial
       5. Voltar""")
+    
+def print_mais():
+    mostrarCalculadora("""Escolha sua  Opção     
+                       
+  1: Raiz Quadrada       
+  2: Graus em Radianos  
+  3: Radianos em Graus      
+  4: Voltar""")
 
 
 def init():
@@ -187,7 +204,7 @@ def init():
 
     escolha = int(input("\nEscolha uma opção para iniciar: "))
 
-    while escolha != 3:
+    while escolha != 4:
         if escolha == 1:
             print_basica()
 
@@ -279,7 +296,34 @@ def init():
                     print_funcoes()
 
         elif escolha == 3:
+            print_mais()
+
+            mais = int(input("Escolha uma opção: "))
+            while mais != 4:
+
+                     if mais == 1:
+                        print("\nVocê escolheu Raiz quadrada!")
+                        a = int(input("Digite o valor que se quer calcular a raiz: "))
+                        print(f'A Raiz quadrada de {a} é {raiz_quadrada(a)}')
+                        break
+                     elif mais == 2:
+                        print("\nVocê escolheu Conversão de graus em radianos!")
+                        a = float(input("Digite o valor em grausº:  "))
+                        resultado = converter_graus_radianos(a)
+                        print(f"O resultado da conversão: {resultado:.2f}")
+                        break
+                     elif mais == 3:
+                            print("\nVocê escolheu Conversão de graus em radianos!")
+                            a = float(input("Digite o valor em grausº:  "))
+                            resultado = converter_radianos_grau(a)
+                            print(f"O resultado da conversão: {resultado:.2f}")
+                            break
+                     elif mais == 4:
+                         print_mais()
+        elif escolha == 4:
             break
+               
+                          
         print_calculator()
 
         escolha = int(input("\nEscolha uma opção para iniciar: "))
