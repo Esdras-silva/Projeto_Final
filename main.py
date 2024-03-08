@@ -65,11 +65,21 @@ def divisao(x, y):
 
 
 def linear(x, a, b):
-     print("Faça o código")
+    return a*x+b
 
 
 def plot_linear(a, b):
-    print("Faça o código")
+    
+    x = np.linspace(-10,10,100)
+    y = linear(x,a,b)
+    plt.plot(x,y , label=f"A função linear: y={a}x+{b}")
+    plt.xlabel("Eixo X")
+    plt.ylabel("Eixo Y")
+    plt.title("O Grafico de função linear")
+    plt.grid(True)
+    plt.show()
+
+
 
 
 def exponencial(a, x):
