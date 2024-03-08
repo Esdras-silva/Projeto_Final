@@ -51,26 +51,21 @@ def mostrarCalculadora(textoDeDentro: str):
     print("|" + "_" * maximoCaracteresPorLinha + 2 * padding * "_" + "|")
 
 def soma(x, y):
-     print(f"O Resultado da soma de {x} + {y} = {x+y}")
+     return x+y
 
 
 def subtracao(x, y):
-    print(f"O Reultado da Subtração de {x} - {y} = {x-y}")
-
+    return x-y
 
 def multiplicacao(x, y):
-    print(f"O Resultado de Multiplicação de {x} x {y} = {x*y}")
-
+    return x*y
 
 def divisao(x, y):
-    if y == 0 :
-        return print(f"Divisão por Zero!!")
-    
-    print(f"O Resultado da Divisão de {x} / {y} = {x/y}")
+     return x/y
 
 
 def linear(x, a, b):
-    return a*x + b
+     print("Faça o código")
 
 
 def plot_linear(a, b):
