@@ -197,12 +197,16 @@ def init():
 
                 if categoria == 1:
                     print("\nVocê escolheu SOMA")
-                    print("Faça o código")
+                    num1 = int(input("Digite o Primeiro Número da Soma: "))
+                    num2 = int(input("Digite o Segundo Número da Soma: "))
+                    print(f'O Resultado da Soma: {soma(num1,num2)}')
                     break
 
                 elif categoria == 2:
                     print("\nVocê escolheu SUBTRAÇÃO")
-                    print("Faça o código")
+                    num1 = int(input("Digite o Primeiro Número da Soma: "))
+                    num2 = int(input("Digite o Segundo Número da Soma: "))
+                    print(f'O Resultado da Soma: {soma(num1,num2)}')
                     break
 
                 elif categoria == 3:
