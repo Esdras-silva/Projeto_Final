@@ -132,11 +132,26 @@ def plot_quadratica(a, b, c):
 
 
 def fatorial(n):
-    print("Faça o código")
+    if n < 0:
+        return "Erro: Não é possivel calcular o fatorial de número negativo"
+    elif n == 0:
+        return 1
+    else:
+        resultado = 1
+        for i in range(n+1):
+            resultado *= i
+        return resultado
 
 
 def plot_fatorial(n):
-    print("Faça o código")
+    x = list(range(n+1))
+    y = [fatorial(i) for i in x]
+    plt.plot(x,y, marker='o', linestyle='-')
+    plt.title('Gráfico do Fatorial')
+    plt.xlabel('Número')
+    plt.ylabel("Fatorial")
+    plt.grid(True)
+    plt.show()
 
 
 def print_calculator():
