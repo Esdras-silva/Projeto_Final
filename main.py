@@ -1,3 +1,4 @@
+import math
 import matplotlib.pyplot as plt
 import numpy as np
 import time
@@ -135,12 +136,9 @@ def plot_quadratica(a, b, c):
 def fatorial(n):
     if n < 0:
         return "Erro: Não é possivel calcular o fatorial de número negativo"
-    elif n == 0:
-        return 1
+    
 
-    resultado = 1
-    for i in range(1,n+1):
-         resultado *= i
+    resultado = math.factorial(n)
     return resultado
 
 
