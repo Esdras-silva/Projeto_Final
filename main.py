@@ -99,15 +99,36 @@ def plot_exponencial(a,b):
 
 
 def funcao_quadratica(x, a, b, c):
-    print("Faça o código")
+    return a*x**2 +b*x+c
 
 
 def calcular_raizes(a, b, c):
-    print("Faça o código")
+    delta = b**2 - 4*a*c
+    raiz_delta = delta **0.5
+
+    if delta < 0 :
+        return "erro delta menor que zero!!"
+    elif delta == 0:
+        raiz = -b / (2*a)
+        return raiz
+    
+    raiz_positiva= -(b) + raiz_delta / (2*a)
+    raiz_negativa= -(b) - raiz_delta/ (2*a)
+
+    return raiz_positiva, raiz_negativa
 
 
 def plot_quadratica(a, b, c):
-    print("Faça o código")
+    x = np.linspace((-10,10,100))
+    y = funcao_quadratica(x, a, b,c)
+
+    plt.plot(x,y,label=f"{a}x² + {b}x + {c}")
+    plt.title("Gráfico de uma Função Quadrática")
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 
 def fatorial(n):
