@@ -221,8 +221,13 @@ def init():
                     print("\nVocê escolheu DIVISÃO")
                     num1 = int(input("Digite o Primeiro Número da Divisão: "))
                     num2 = int(input("Digite o Segundo Número da Divisão: "))
-                    print(f'O Resultado da Divisão: {soma(num1,num2)}')
+
+                    if num2 < 0 :
+                        print("Erro: Divisão por Zero!!!")
+                    else:
+                        print(f'O Resultado da Divisão: {soma(num1,num2)}')
                     break
+                   
 
                 elif categoria == 5:
                     print_basica()
